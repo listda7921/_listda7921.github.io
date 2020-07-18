@@ -5,8 +5,9 @@ git commit -m"checkin"
 git push origin master
 
 
-cp docs ../githubPagesRelease -r -Force
 cd ../githubPagesRelease/docs
+rm *
+cp ../github-page/docs ../githubPagesRelease -r -Force
 
 git add . 
 git commit -m"checkin"
