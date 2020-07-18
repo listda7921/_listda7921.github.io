@@ -5,9 +5,9 @@ git commit -m"checkin"
 git push origin master
 
 
-cd ../githubPagesRelease/docs
-rm *
+rm -Path 'D:\Code\githubPages\githubPagesRelease\docs\*' 
 cp ../github-page/docs ../githubPagesRelease -r -Force
+cd ../githubPagesRelease/docs
 
 git add . 
 git commit -m"checkin"
