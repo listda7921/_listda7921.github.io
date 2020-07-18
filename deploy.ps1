@@ -5,7 +5,7 @@ git commit -m"checkin"
 git push origin master
 
 
-cp -r docs ../githubPagesRelease
+cp docs ../githubPagesRelease -r -f
 cd ../githubPagesRelease/docs
 
 git add . 
