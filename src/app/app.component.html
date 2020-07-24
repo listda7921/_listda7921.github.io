@@ -1,3 +1,37 @@
 <div>
   <h5>{{title}}</h5>
 </div>
+<a-scene>
+  <a-assets>
+      <img id="scales" src="img/scale.jpg">
+      <img id="foliage" src="img/foliage.jpg">
+      <img id="bark" src="img/bark.jpg">
+      <img id="360p" src="img/room360.jpg">
+  </a-assets>
+<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" animation="property: visible; to:false; startEvents:mouseenter">
+    <!-- <a-animation attribute="visible" to="false" begin="click"></a-animation> -->
+</a-box>
+<a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+<a-plane positioan="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" scale="4 2 2" src="#scales" repeat="60 30"></a-plane>
+<a-sky color="#ECECEC" src="#360p"></a-sky>
+<a-entity position="-2 0 1">
+    <a-box position="0 0 0" color="#FFC65D" scale="0.2 4 0.2" src="#bark" repeat=".5 6"></a-box>
+    <a-box position="0 2.5 0" color="#7BC8A4" src="#foliage" repeat="2 2"></a-box>
+</a-entity>
+<a-entity position="-4 0 1">
+  <a-box position="0 0 0" color="#FFC65D" scale="0.2 3 0.2" src="#bark" repeat=".5 6"></a-box>
+  <a-box position="0 2 0" color="#7BC8A4" src="#foliage" repeat="2 2"></a-box>
+</a-entity>
+<!-- <a-entity camera look-controls position="0 1 0"> 
+  <a-cursor></a-cursor>    
+</a-entity> -->
+<a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+<a-entity
+geometry="primitive: box"
+material="color: red"
+animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
+animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";></a-entity>
+
+</a-scene>
