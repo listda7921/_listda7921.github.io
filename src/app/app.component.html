@@ -7,6 +7,10 @@
       <img id="foliage" src="../assets/foliage.jpg">
       <img id="bark" src="../assets/bark.jpg">
       <img id="360p" src="../assets/room360.jpg">
+      <a-asset-item id="smili" src="../assets/smili.obj"></a-asset-item>
+      <a-asset-item id="smilimtl" src="../assets/smili.mtl"></a-asset-item>
+      <a-asset-item id="monu9" src="../assets/monu9.obj"></a-asset-item>
+      <a-asset-item id="monu9mtl" src="../assets/monu9.mtl"></a-asset-item>
   </a-assets>
 <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" animation="property: visible; to:false; startEvents:mouseenter">
     <!-- <a-animation attribute="visible" to="false" begin="click"></a-animation> -->
@@ -14,7 +18,7 @@
 <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
 <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
 <a-plane positioan="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" scale="4 2 2" src="#scales" repeat="60 30"></a-plane>
-<a-sky color="#ECECEC" src="#360p"></a-sky>
+<!-- <a-sky color="#ECECEC" src="#360p"></a-sky> -->
 <a-entity position="-2 0 1">
     <a-box position="0 0 0" color="#FFC65D" scale="0.2 4 0.2" src="#bark" repeat=".5 6"></a-box>
     <a-box position="0 2.5 0" color="#7BC8A4" src="#foliage" repeat="2 2"></a-box>
@@ -23,6 +27,9 @@
   <a-box position="0 0 0" color="#FFC65D" scale="0.2 3 0.2" src="#bark" repeat=".5 6"></a-box>
   <a-box position="0 2 0" color="#7BC8A4" src="#foliage" repeat="2 2"></a-box>
 </a-entity>
+
+<a-entity obj-model="obj: #smili; mtl:#smilimtl" position="-2 1 -7"></a-entity>
+<a-entity _ngcontent-vxq-c11="" obj-model="obj: ../assets/monu9.obj; mtl: ../assets/monu9.mtl" position="27.1615 -0.0415 -4.31477" scale="4 4 4"></a-entity>
 <!-- <a-entity camera look-controls position="0 1 0"> 
   <a-cursor></a-cursor>    
 </a-entity> -->
